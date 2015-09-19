@@ -1,0 +1,86 @@
+!!! 5
+%html
+  / Developed by Merijn Hoogeveen and designed by Franklin Schamhart
+  %head
+    %meta{:charset => "UTF-8"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %link{:href => "public.css", :rel => "stylesheet"}
+    - if data['links']
+      -data['links'].each do |link|
+        %link{:href => link, :rel => "stylesheet"}
+    %title= data['personal']['name']
+    - if data['styles']
+      - data['styles'].each do |style|
+        %style{:type => "text/css"}= style
+  %body
+    #main-wrapper
+      #information
+        #bio
+          %figure
+            %img{:src => data['personal']['picture']}
+          %div
+            %h1= data['personal']['name']
+            %span.job= data['personal']['jobtitle']
+            %span.location= "#{data['personal']['location']['city']}, #{data['personal']['location']['country']}"
+        
+        %section#profile
+          %h2 Profile
+          %div.wrapper
+            %p= data['profile']['bio']
+
+        %section#experience.lists
+          %h2 Experience
+          %div.wrapper
+            %ul
+              - data['experience'].each do |experience|
+                %li
+                  %h3= experience['title']
+                  %span= "#{experience['date']['start']} - #{experience['date']['end']}"
+                  %p= experience['description']
+
+        %section#education.lists
+          %h2 Education
+          %div.wrapper
+            %ul
+              - data['education'].each do |education|
+                %li
+                  %h3= education['title']
+                  %span= "#{education['date']['start']} - #{education['date']['end']}"
+                  %p= education['description']
+
+      %aside
+        %section#details
+          %h2 Details
+          %div.wrapper
+            %ul
+              - data['details']['address'].each do |address|
+                %li= address
+              %li= data['details']['phonenumber']
+              %li
+                %a{:href => "mailto:#{data['details']['email']}"}= data['details']['email']
+        
+        - data['lists'].each do |list|
+          - list.each do |type, values|
+            %section
+              %h2= type
+              %div.wrapper  
+                - values.each do |value|
+                  %ul
+                    - value.each do |k,v|
+                      %li
+                        %p= k
+                        %div.skillbar
+                          %div.fill{:style => "width:#{v}%;"}
+      %footer
+        %span 
+          #{data['personal']['name']} &copy;2015 - All rights reserved |  Visit the project at 
+          %a{:href => "https://github.com/hoogeveen/cv", :target => "_blank", :rel => "external"} Github
+
+    - if data['google_analytics']
+      :javascript
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '#{data['google_analytics']}', 'auto');
+        ga('send', 'pageview');

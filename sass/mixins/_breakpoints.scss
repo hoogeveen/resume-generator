@@ -1,0 +1,35 @@
+@mixin bp-sm-ls () { /* smartphone-landscape */
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin bpm() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bpl() {
+  @media screen and (min-width: 1140px) {
+    @content;
+  }
+}
+
+@mixin bpxl() {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin bpm-max() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bps-max() {
+  @media screen and (max-width: 475px) {
+    @content;
+  }
+}

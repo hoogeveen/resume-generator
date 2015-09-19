@@ -1,0 +1,7 @@
+/assets
+/export
+export.*
+Gemfile.lock
+.sass-cache
+/data/info.yaml
+/data/_variables.scss

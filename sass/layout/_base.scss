@@ -1,0 +1,46 @@
+body {
+  padding: 0;
+  @include linear-gradient(135deg, $color-primary, $color-secundary);
+  @include bpm () {
+    padding: $base-margin;
+  }
+}
+
+#main-wrapper {
+  background-color: $color-white;
+  box-shadow: -25px 25px 25px 0 rgba(0,0,0,0.15);
+  margin: 0 auto;
+  max-width: $max-width;
+  overflow: auto;
+  position: relative;
+}
+
+#information {
+  width: 100%;
+  box-sizing: border-box;
+  padding: $base-margin $base-margin 0;
+  @include bpm () {
+    padding: 2*$base-margin 2*$base-margin $base-margin;
+  }
+  @include bpl () {
+    width: 70%;
+    float: left;
+    border-right: 1px solid $color-grey;
+  }
+}
+
+section {
+  margin: $base-margin 0 0;
+  .wrapper {
+    margin-top: $base-margin/2;
+    padding-left: $base-margin/2;
+    border-left: 1px solid $color-grey;
+  }
+  @include bpm () {
+    margin: 2*$base-margin 0 0;
+    .wrapper {
+      padding-left: $base-margin;
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6, p, span, li, a, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-heading;
+  color: #303030;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+h2 {
+  color: $color-primary;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+  color: darken($color-grey, 55);
+}
+
+span, p, li {
+  font-family: $font-body;
+  color: darken($color-grey, 40);
+  line-height: 2;
+}
+
+span, a {
+  color: $color-primary;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

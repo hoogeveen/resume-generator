@@ -1,0 +1,59 @@
+personal:
+    name: "John Doe"
+    jobtitle: "Backend Developer"
+    birthday: "02-10-1989"
+    location:
+        city: "London"
+        country: "United Kingdom"
+    picture: "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+
+profile:
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus. Sed condimentum, magna ut pulvinar sagittis, mi felis dignissim dolor, sed sollicitudin libero sapien eu urna. Curabitur quis mauris erat. Proin quis nisi nunc."
+
+experience:
+    - title: "Digital Developer @ Acme Enterpises, Inc."
+      date:
+        start: "11/2014"
+        end: "present"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus."
+    - title: "Digital Developer @ Acme Enterpises, Inc."
+      date:
+        start: "11/2014"
+        end: "present"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus."
+
+education:
+    - title: "Digital Product Development"
+      date:
+        start: "03/2009"
+        end: "03/2010"
+      description: "University of Oxford"
+    - title: "Multimedia"
+      date:
+        start: "03/2005"
+        end: "06/2008"
+      description: "Harvard University"
+
+details:
+    birthdate: "02/10/1989"
+    address:
+        - "1110 High Street"
+        - "Santa Cruz, CA 95064"
+    phonenumber: "(000) 000-0000"
+    email: "johndoe@acme.org"
+
+lists:
+    - Languages:
+        - Dutch: 100
+        - Portuguese: 100
+        - English: 80
+
+    - Skills:
+        - PHP: 100
+        - Ruby: 100
+        - Javascript: 60
+
+links:
+    - "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"
+
+# google_analytics: "UA-XXXXXXXX-X"

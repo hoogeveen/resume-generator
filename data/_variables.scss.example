@@ -1,0 +1,11 @@
+$color-grey: #EBEBEB;
+$color-white: #FEFEFE;
+$color-primary: #329CB9;
+$color-secundary: #248DAA;
+
+$base-margin: 2em;
+
+$max-width: 1150px;
+
+$font-heading: 'Source Sans Pro', sans-serif;
+$font-body: 'Source Sans Pro', sans-serif;

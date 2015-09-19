@@ -1,0 +1,39 @@
+#bio {
+  overflow: auto;
+  figure {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      @include filter(grayscale(75%));
+      border-radius: 40px;
+      object-fit: cover;
+    }
+  }
+  div {
+    width: calc(100% - 100px - 2em );
+    float: right;
+    span {
+      display: block;
+      &.location {
+        color: darken($color-grey, 40);
+      }
+    }
+  }
+  @include bpm () {
+    figure {
+      width: 100px;
+      height: 100px;
+      img {
+        border-radius: 50px;
+      }
+    }
+    div {
+      width: calc(100% - 100px - 2em );
+      margin-top: $base-margin / 4;
+    }
+  }
+}

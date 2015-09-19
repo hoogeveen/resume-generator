@@ -1,0 +1,14 @@
+.skillbar {
+  width: 100%;
+  height: 5px;
+  background-color: $color-grey;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  .fill {
+    border-radius: 3px 0 0 3px;
+    width: 100%;
+    height: 5px;
+    @include linear-gradient(135deg, lighten($color-primary, 10), lighten($color-secundary,10));
+  }
+}

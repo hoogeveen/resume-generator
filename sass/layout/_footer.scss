@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  clear: left;
+  box-sizing: border-box;
+  border-top: 1px solid $color-grey;
+  padding: $base-margin;
+  span {
+    color: darken($color-grey, 40);
+  }
+  @include bpm () {
+    padding: $base-margin 2*$base-margin;
+  }
+}

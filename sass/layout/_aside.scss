@@ -1,0 +1,45 @@
+aside {
+  box-sizing: border-box;
+  padding: 0 $base-margin 0;
+  width: 100%;
+  ul {
+    padding: 0 $base-margin 0 0;
+    margin-bottom: 0;
+  }
+  section {
+    margin: $base-margin 0 0;
+    &:last-of-type {
+      margin-bottom: $base-margin;
+    }
+  }
+  @include bpm () {
+    overflow: auto;
+    padding: 0 $base-margin * 2 $base-margin;
+    .wrapper {
+      border-left: 0;
+      padding: 0;
+    }
+    section {
+      margin: 0;
+      width: 30%;
+      float: left;
+      margin-right: 5%;
+      &:last-of-type {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  @include bpl () {
+    float: left;
+    padding: 2*$base-margin 2*$base-margin - ($base-margin/2) 0;
+    width: 30%;
+    section {
+      width: 100%;
+      margin: 2 * $base-margin 0 0;
+      &:first-of-type {
+        margin-top: $base-margin/4;
+      }
+    }
+  }
+}
