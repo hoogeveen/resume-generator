@@ -9,11 +9,13 @@ body {
 
 #main-wrapper {
   background-color: $color-white;
-  box-shadow: -25px 25px 25px 0 rgba(0,0,0,0.15);
   margin: 0 auto;
   max-width: $max-width;
   overflow: auto;
   position: relative;
+  @include bpm () {
+    box-shadow: -25px 25px 25px 0 rgba(0,0,0,0.15);
+  }
 }
 
 #information {
