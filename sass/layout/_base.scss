@@ -1,5 +1,6 @@
 body {
   padding: 0;
+  margin: 0;
   @include linear-gradient(135deg, $color-primary, $color-secundary);
   @include bpm () {
     padding: $base-margin;
