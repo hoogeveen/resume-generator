@@ -1,3 +1,5 @@
+<a href="https://codeclimate.com/github/hoogeveen/cv"><img src="https://codeclimate.com/github/hoogeveen/cv/badges/gpa.svg" /></a>
+
 # CV Generator
 Create your own CV in a couple of seconds by filling out a YAML file and compiling it into HTML and CSS.
 
