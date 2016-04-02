@@ -16,13 +16,14 @@
     #main-wrapper
       #information
         #bio
-          %figure
-            %img{:src => data['personal']['picture']}
+          -if data['personal']['picture']
+            %figure
+              %img{:src => data['personal']['picture']}
           %div
             %h1= data['personal']['name']
             %span.job= data['personal']['jobtitle']
             %span.location= "#{data['personal']['location']['city']}, #{data['personal']['location']['country']}"
-        
+
         %section#profile
           %h2 Profile
           %div.wrapper
@@ -58,12 +59,12 @@
               %li= data['details']['phonenumber']
               %li
                 %a{:href => "mailto:#{data['details']['email']}"}= data['details']['email']
-        
+
         - data['lists'].each do |list|
           - list.each do |type, values|
             %section
               %h2= type
-              %div.wrapper  
+              %div.wrapper
                 - values.each do |value|
                   %ul
                     - value.each do |k,v|
@@ -72,8 +73,8 @@
                         %div.skillbar
                           %div.fill{:style => "width:#{v}%;"}
       %footer
-        %span 
-          #{data['personal']['name']} &copy;2015 - All rights reserved |  Visit the project at 
+        %span
+          #{data['personal']['name']} &copy;2015 - All rights reserved |  Visit the project at
           %a{:href => "https://github.com/hoogeveen/cv", :target => "_blank", :rel => "external"} Github
 
     - if data['google_analytics']
