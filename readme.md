@@ -1,5 +1,5 @@
-# CV Generator
-Create your own CV in a couple of seconds by filling out a YAML file and compiling it into HTML and CSS.
+# Resume Generator
+Create your own resume in a couple of seconds by filling out a YAML file and compiling it into HTML and CSS.
 
 ![alt text](http://yourcv.io/cv.png "CV Screenshot")
 
@@ -15,7 +15,7 @@ Create your own CV in a couple of seconds by filling out a YAML file and compili
 - You can import other google fonts by specifying it in the `links` array in the `data/info.yaml` file
 - You can create a folder called `assets`, all its contents will be copied to the 'export' folder.
 
-The design of this CV template was made by [Franklin Schamhart](https://dribbble.com/shots/1887983-Resume)
+The design of this resume template was made by [Franklin Schamhart](https://dribbble.com/shots/1887983-Resume)
 
 ##Copyright
 
