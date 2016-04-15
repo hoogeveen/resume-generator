@@ -67,11 +67,15 @@
               %div.wrapper
                 - values.each do |value|
                   %ul
-                    - value.each do |k,v|
-                      %li
-                        %p= k
-                        %div.skillbar
-                          %div.fill{:style => "width:#{v}%;"}
+                    - if value.class.to_s == 'Hash'
+                      - value.each do |k,v|
+                        %li
+                          %p= k
+                          %div.skillbar
+                            %div.fill{:style => "width:#{v}%;"}
+                    - if value.class.to_s == 'String'
+                      %li= value
+
       %footer
         %span
           #{data['personal']['name']} &copy;2015 - All rights reserved |  Visit the project at
